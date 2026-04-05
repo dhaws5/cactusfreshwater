@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cactus Fresh Water LLC</title>
+  <meta
+    name="description"
+    content="Cactus Fresh Water LLC is a fresh water station serving oilfield needs including fracking, cementing, purging tanks, lay-flat lines, and road construction."
+  />
+  <style>
+    :root {
+      --navy: #0b1f3a;
+      --blue: #0f4c81;
+      --teal: #0c8f8f;
+      --green: #1f9d6a;
+      --light: #f4fbfb;
+      --white: #ffffff;
+      --text: #183042;
+      --muted: #5f7485;
+      --border: rgba(15, 76, 129, 0.12);
+      --shadow: 0 12px 30px rgba(12, 40, 70, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(31, 157, 106, 0.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(12, 143, 143, 0.08), transparent 28%),
+        var(--light);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid rgba(11, 31, 58, 0.06);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0.2px;
+    }
+
+    .brand-badge {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 900;
+      box-shadow: var(--shadow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cta {
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--blue), var(--teal));
+      color: white !important;
+      font-weight: 700;
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      padding: 88px 0 72px;
+      scroll-margin-top: 100px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(12, 143, 143, 0.16);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      color: var(--teal);
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.05;
+      color: var(--navy);
+      margin-bottom: 18px;
+      letter-spacing: -1.4px;
+    }
+
+    .hero p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      color: white;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--navy);
+      border: 1px solid var(--border);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, #ffffff, #eef9f8);
+      border: 1px solid rgba(15, 76, 129, 0.08);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: 0 20px 45px rgba(11, 31, 58, 0.08);
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: white;
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+    }
+
+    .stat:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat h3 {
+      color: var(--blue);
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin: 0;
+    }
+
+    section {
+      padding: 72px 0;
+      scroll-margin-top: 100px;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 36px;
+    }
+
+    .section-heading .tag {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: var(--green);
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 26px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      color: var(--navy);
+      margin-bottom: 12px;
+      font-size: 1.12rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--teal), var(--green));
+    }
+
+    .band {
+      background: linear-gradient(135deg, #0d355d, #0a746d);
+      color: white;
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+
+    .band h2 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      margin-bottom: 10px;
+    }
+
+    .band p {
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 760px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+    }
+
+    .contact-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-box h3 {
+      color: var(--navy);
+      margin-bottom: 16px;
+      font-size: 1.2rem;
+    }
+
+    .contact-list p {
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .contact-list strong {
+      color: var(--text);
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(15, 76, 129, 0.14);
+      background: #fbfeff;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      color: var(--text);
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 4px rgba(12, 143, 143, 0.08);
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    footer {
+      padding: 30px 0 40px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      padding-top: 18px;
+      border-top: 1px solid rgba(11, 31, 58, 0.08);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .grid-3,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        letter-spacing: -0.8px;
+      }
+
+      .hero-card,
+      .card,
+      .contact-box,
+      .band {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="#" class="brand">
+        <div class="brand-badge">CF</div>
+        <span>Cactus Fresh Water LLC</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#uses">Uses</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Fresh Water Station • Oilfield Support</div>
+          <h1>Reliable fresh water supply for oilfield and jobsite operations.</h1>
+          <p>
+            Cactus Fresh Water LLC is a fresh water station providing dependable water access
+            for fracking, cementing, purging tanks, lay-flat lines, road construction, and other miscellaneous jobs.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Request Information</a>
+            <a href="tel:4322086938" class="btn btn-secondary">Call 432-208-6938</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="pill">Fracking</div>
+            <div class="pill">Cementing</div>
+            <div class="pill">Purging Tanks</div>
+            <div class="pill">Lay-Flat Lines</div>
+            <div class="pill">Road Construction</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="stat">
+            <h3>Fresh Water Station</h3>
+            <p>
+              Dependable fresh water access for oilfield, construction, and jobsite operations.
+            </p>
+          </div>
+
+          <div class="stat">
+            <h3>Built for Field Needs</h3>
+            <p>
+              Supporting projects that need water for fracking, cementing, purging tanks, lay-flat lines, and road construction.
+            </p>
+          </div>
+
+          <div class="stat">
+            <h3>Available When Needed</h3>
+            <p>
+              Local, dependable service focused on keeping your operation moving.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="uses">
+      <div class="container">
+        <div class="section-heading">
+          <div class="tag">Uses</div>
+          <h2>Fresh water for the jobs that need it most.</h2>
+          <p>
+            We provide fresh water for fracking, cementing, purging tanks, lay-flat lines, and road construction.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="icon">F</div>
+            <h3>Fracking</h3>
+            <p>
+              Fresh water supply for hydraulic fracturing operations and related field activity.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">C</div>
+            <h3>Cementing</h3>
+            <p>
+              Reliable water access for cementing jobs where consistency and availability matter.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">P</div>
+            <h3>Purging Tanks</h3>
+            <p>
+              Fresh water for tank purging and other operational cleanout needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">L</div>
+            <h3>Lay-Flat Lines</h3>
+            <p>
+              Water supply support for lay-flat line operations and field service needs.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">R</div>
+            <h3>Road Construction</h3>
+            <p>
+              Fresh water access for road construction and related project work.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="icon">M</div>
+            <h3>Miscellaneous Jobs</h3>
+            <p>
+              Dependable water availability for additional oilfield and jobsite applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="band">
+          <h2>Dependable fresh water access for oilfield and field operations.</h2>
+          <p>
+            If your job needs fresh water for fracking, cementing, purging tanks, lay-flat lines, road construction,
+            or other field work, Cactus Fresh Water LLC is ready to help.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="section-heading">
+          <div class="tag">Why Us</div>
+          <h2>Local, reliable, and built around your schedule.</h2>
+          <p>
+            We are a local run business focused on dependable service and competitive rates.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Local Run Business</h3>
+            <p>
+              We’re locally run and committed to serving the needs of our community and surrounding oilfield operations.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Open 24/7</h3>
+            <p>
+              Our station is open 24/7 to help support operations that run around the clock.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Competitive Rates</h3>
+            <p>
+              We offer competitive pricing so customers can get the water they need at a fair rate.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Water Tested Twice a Year</h3>
+            <p>
+              Our water is tested twice a year to help maintain quality and consistency.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Dependable Access</h3>
+            <p>
+              We work to provide reliable access to fresh water when your job demands it.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Industry Focused</h3>
+            <p>
+              We serve oilfield, construction, and other field-based operations that require a dependable fresh water source.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-heading">
+          <div class="tag">Contact</div>
+          <h2>Get in touch with Cactus Fresh Water LLC.</h2>
+          <p>
+            Reach out for information about fresh water availability and how we can support your job.
+          </p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-box">
+            <h3>Contact Information</h3>
+            <div class="contact-list">
+              <p><strong>Company:</strong> Cactus Fresh Water LLC</p>
+              <p><strong>Phone:</strong> <a href="tel:4322086938">432-208-6938</a></p>
+              <p><strong>Email:</strong> <a href="mailto:cactusfreshwater@gmail.com">cactusfreshwater@gmail.com</a></p>
+              <p><strong>Service Type:</strong> Fresh Water Station</p>
+              <p><strong>Hours:</strong> Open 24/7</p>
+            </div>
+          </div>
+
+          <div class="contact-box">
+            <h3>Send a Message</h3>
+            <form onsubmit="event.preventDefault(); alert('Thanks for reaching out to Cactus Fresh Water LLC. This form is ready to be connected to email or a form service.');">
+              <input type="text" placeholder="Your Name" required />
+              <input type="email" placeholder="Your Email" required />
+              <input type="text" placeholder="Company Name" />
+              <input type="text" placeholder="Phone Number" />
+              <textarea placeholder="Tell us what type of job or water need you have." required></textarea>
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 Cactus Fresh Water LLC. All rights reserved.</div>
+      <div>Fresh Water Station • Open 24/7</div>
+    </div>
+  </footer>
+</body>
+</html>
