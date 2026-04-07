@@ -699,14 +699,17 @@
 
           <div class="contact-box">
             <h3>Send a Message</h3>
-            <form onsubmit="event.preventDefault(); alert('Thanks for reaching out to Cactus Fresh Water LLC. This form is ready to be connected to email or a form service.');">
-              <input type="text" placeholder="Your Name" required />
-              <input type="email" placeholder="Your Email" required />
-              <input type="text" placeholder="Company Name" />
-              <input type="text" placeholder="Phone Number" />
-              <textarea placeholder="Tell us what type of job or water need you have." required></textarea>
-              <button type="submit" class="btn btn-primary">Submit Request</button>
-            </form>
+            <form action="https://formspree.io/f/mdapbjkb" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <input type="text" name="company" placeholder="Company Name" />
+  <input type="text" name="phone" placeholder="Phone Number" />
+  <textarea name="message" placeholder="Tell us what type of job or water need you have." required></textarea>
+
+  <input type="hidden" name="_subject" value="New website inquiry from Cactus Fresh Water LLC" />
+
+  <button type="submit" class="btn btn-primary">Submit Request</button>
+</form>
           </div>
         </div>
       </div>
