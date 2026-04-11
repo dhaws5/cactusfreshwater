@@ -5,41 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cactus Fresh Water LLC | Fresh Water Station in Wink, TX</title>
   <meta name="description" content="Cactus Fresh Water LLC is a local fresh water station in Wink, TX providing water for fracking, cementing, purging tanks, lay-flat lines, and road construction. Open 24/7 with competitive rates." />
-  
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-<link rel="shortcut icon" href="/favicon.png" />
-<link rel="apple-touch-icon" href="/favicon.png" />
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QV47H30T6X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <link rel="shortcut icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
 
-  gtag('config', 'G-QV47H30T6X');
-</script> 
-  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QV47H30T6X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QV47H30T6X');
+  </script>
+
+  <!-- Local Business Schema -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Cactus Fresh Water LLC",
-  "url": "https://cactusfreshwater.com/",
-  "telephone": "432-208-6938",
-  "email": "cactusfreshwater@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "506 SE 6th St",
-    "addressLocality": "Wink",
-    "addressRegion": "TX",
-    "postalCode": "79789",
-    "addressCountry": "US"
-  },
-  "openingHours": "Mo-Su 00:00-23:59",
-  "description": "Cactus Fresh Water LLC is a local fresh water station in Wink, TX providing water for fracking, cementing, purging tanks, lay-flat lines, road construction, and other oilfield and jobsite needs. Open 24/7 with competitive rates and water tested twice a year."
-}
-</script>
-  
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cactus Fresh Water LLC",
+    "url": "https://cactusfreshwater.com/",
+    "telephone": "432-208-6938",
+    "email": "cactusfreshwater@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "506 SE 6th St",
+      "addressLocality": "Wink",
+      "addressRegion": "TX",
+      "postalCode": "79789",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Su 00:00-23:59",
+    "description": "Cactus Fresh Water LLC is a local fresh water station in Wink, TX providing water for fracking, cementing, purging tanks, lay-flat lines, road construction, and other oilfield and jobsite needs. Open 24/7 with competitive rates and water tested twice a year."
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where are you located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cactus Fresh Water LLC is located at 506 SE 6th St, Wink, TX 79789."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your fresh water used for?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We provide fresh water for fracking, cementing, purging tanks, lay-flat lines, road construction, and other miscellaneous jobs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are you open 24/7?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we are open 24/7 to support oilfield and jobsite operations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is your water tested?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our water is tested twice a year to help maintain quality and consistency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you serve oilfield operations in Wink, TX?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we support local oilfield and jobsite operations in Wink, TX, Winkler County, and the surrounding Permian Basin area."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact you?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can call us at 432-208-6938, email us at cactusfreshwater@gmail.com, or use the contact form on this page."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --navy: #0b1f3a;
@@ -112,10 +170,10 @@
     }
 
     .brand-logo {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-}
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+    }
 
     .nav-links {
       display: flex;
@@ -273,7 +331,7 @@
     }
 
     .section-heading {
-      max-width: 700px;
+      max-width: 760px;
       margin-bottom: 36px;
     }
 
@@ -303,6 +361,12 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
     }
 
     .card {
@@ -354,10 +418,23 @@
       max-width: 760px;
     }
 
-    .contact-wrap {
+    .faq-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .faq-card p {
+      margin-bottom: 0;
+    }
+
+    .map-box {
+      margin-top: 24px;
+    }
+
+    .contact-grid {
       display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
+      grid-template-columns: 0.95fr 1.05fr;
       gap: 24px;
+      align-items: start;
     }
 
     .contact-box {
@@ -429,7 +506,8 @@
     @media (max-width: 960px) {
       .hero-grid,
       .grid-3,
-      .contact-wrap {
+      .grid-2,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
@@ -466,13 +544,15 @@
   <header>
     <div class="container nav">
       <a href="#" class="brand">
-  <img src="/logo.png" alt="Cactus Fresh Water LLC Logo" class="brand-logo" />
-  <span>Cactus Fresh Water LLC</span>
-</a>
+        <img src="/logo.png" alt="Cactus Fresh Water LLC Logo" class="brand-logo" />
+        <span>Cactus Fresh Water LLC</span>
+      </a>
 
       <nav class="nav-links">
         <a href="#uses">Uses</a>
+        <a href="#service-area">Service Area</a>
         <a href="#why">Why Us</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact" class="nav-cta">Contact</a>
       </nav>
     </div>
@@ -485,8 +565,8 @@
           <div class="eyebrow">Fresh Water Station • Oilfield Support</div>
           <h1>Reliable fresh water supply for Permian Basin oilfield and jobsite operations.</h1>
           <p>
-  Cactus Fresh Water LLC is a local fresh water station in Wink, TX serving the Permian Basin with dependable water access for fracking, cementing, purging tanks, lay-flat lines, road construction, and other miscellaneous jobs.
-</p>
+            Cactus Fresh Water LLC is a local fresh water station in Wink, TX serving the Permian Basin with dependable water access for fracking, cementing, purging tanks, lay-flat lines, road construction, and other miscellaneous jobs.
+          </p>
 
           <div class="hero-actions">
             <a href="#contact" class="btn btn-primary">Request Information</a>
@@ -505,23 +585,15 @@
         <div class="hero-card">
           <div class="stat">
             <h3>Fresh Water Station</h3>
-            <p>
-              Dependable fresh water access for oilfield, construction, and jobsite operations for the Permian Basin.
-            </p>
+            <p>Dependable fresh water access for oilfield, construction, and jobsite operations throughout the Permian Basin.</p>
           </div>
-
           <div class="stat">
             <h3>Built for Field Needs</h3>
-            <p>
-              Supporting projects that need water for fracking, cementing, purging tanks, lay-flat lines, and road construction.
-            </p>
+            <p>Supporting projects that need water for fracking, cementing, purging tanks, lay-flat lines, and road construction.</p>
           </div>
-
           <div class="stat">
             <h3>Available When Needed</h3>
-            <p>
-              Local, dependable service focused on keeping your operation moving.
-            </p>
+            <p>Local, dependable service focused on keeping your operation moving.</p>
           </div>
         </div>
       </div>
@@ -541,49 +613,32 @@
           <div class="card">
             <div class="icon">F</div>
             <h3>Fracking</h3>
-            <p>
-              Fresh water supply for hydraulic fracturing operations and related field activity.
-            </p>
+            <p>Fresh water supply for hydraulic fracturing operations and related field activity.</p>
           </div>
-
           <div class="card">
             <div class="icon">C</div>
             <h3>Cementing</h3>
-            <p>
-              Reliable water access for cementing jobs where consistency and availability matter.
-            </p>
+            <p>Reliable water access for cementing jobs where consistency and availability matter.</p>
           </div>
-
           <div class="card">
             <div class="icon">P</div>
             <h3>Purging Tanks</h3>
-            <p>
-              Fresh water for tank purging and other operational cleanout needs.
-            </p>
+            <p>Fresh water for tank purging and other operational cleanout needs.</p>
           </div>
-
           <div class="card">
             <div class="icon">L</div>
             <h3>Lay-Flat Lines</h3>
-            <p>
-              Water supply support for lay-flat line operations and field service needs.
-            </p>
+            <p>Water supply support for lay-flat line operations and field service needs.</p>
           </div>
-
           <div class="card">
             <div class="icon">R</div>
             <h3>Road Construction</h3>
-            <p>
-              Fresh water access for road construction and related project work.
-            </p>
+            <p>Fresh water access for road construction and related project work.</p>
           </div>
-
           <div class="card">
             <div class="icon">M</div>
             <h3>Miscellaneous Jobs</h3>
-            <p>
-              Dependable water availability for additional oilfield and jobsite applications.
-            </p>
+            <p>Dependable water availability for additional oilfield and jobsite applications.</p>
           </div>
         </div>
       </div>
@@ -602,17 +657,17 @@
     </section>
 
     <section id="service-area">
-  <div class="container">
-    <div class="section-heading">
-      <div class="tag">Service Area</div>
-      <h2>Proudly serving Wink, TX and surrounding Permian Basin operations.</h2>
-      <p>
-        Cactus Fresh Water LLC is located in Wink, Texas and supports local oilfield and jobsite operations across Winkler County, the Permian Basin, and surrounding areas with dependable fresh water access.
-      </p>
-    </div>
-  </div>
-</section>
-    
+      <div class="container">
+        <div class="section-heading">
+          <div class="tag">Service Area</div>
+          <h2>Proudly serving Wink, TX and surrounding Permian Basin operations.</h2>
+          <p>
+            Cactus Fresh Water LLC is located in Wink, Texas and supports local oilfield and jobsite operations across Winkler County, the Permian Basin, and surrounding areas with dependable fresh water access.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section id="why">
       <div class="container">
         <div class="section-heading">
@@ -626,44 +681,71 @@
         <div class="grid-3">
           <div class="card">
             <h3>Local Run Business</h3>
-            <p>
-              We’re locally run and committed to serving the needs of our community and surrounding oilfield operations.
-            </p>
+            <p>We’re locally run and committed to serving the needs of our community and surrounding oilfield operations.</p>
           </div>
-
           <div class="card">
             <h3>Open 24/7</h3>
-            <p>
-              Our station is open 24/7 to help support operations that run around the clock.
-            </p>
+            <p>Our station is open 24/7 to help support operations that run around the clock.</p>
           </div>
-
           <div class="card">
             <h3>Competitive Rates</h3>
-            <p>
-              We offer competitive pricing so customers can get the water they need at a fair rate.
-            </p>
+            <p>We offer competitive pricing so customers can get the water they need at a fair rate.</p>
           </div>
-
           <div class="card">
             <h3>Water Tested Twice a Year</h3>
-            <p>
-              Our water is tested twice a year to help maintain quality and consistency.
-            </p>
+            <p>Our water is tested twice a year to help maintain quality and consistency.</p>
           </div>
-
           <div class="card">
             <h3>Dependable Access</h3>
-            <p>
-              We work to provide reliable access to fresh water when your job demands it.
-            </p>
+            <p>We work to provide reliable access to fresh water when your job demands it.</p>
           </div>
-
           <div class="card">
             <h3>Industry Focused</h3>
-            <p>
-              We serve oilfield, construction, and other field-based operations that require a dependable fresh water source.
-            </p>
+            <p>We serve oilfield, construction, and other field-based operations that require a dependable fresh water source.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <div class="tag">FAQ</div>
+          <h2>Frequently Asked Questions</h2>
+          <p>
+            Helpful answers about our location, hours, water uses, and service area.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card faq-card">
+            <h3>Where are you located?</h3>
+            <p>Cactus Fresh Water LLC is located at 506 SE 6th St, Wink, TX 79789.</p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>What is your fresh water used for?</h3>
+            <p>We provide fresh water for fracking, cementing, purging tanks, lay-flat lines, road construction, and other miscellaneous jobs.</p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>Are you open 24/7?</h3>
+            <p>Yes. Our station is open 24/7 to support oilfield and jobsite operations when water is needed.</p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>Is your water tested?</h3>
+            <p>Yes. Our water is tested twice a year to help maintain quality and consistency.</p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>Do you serve oilfield operations in Wink, TX?</h3>
+            <p>Yes. We support local oilfield and jobsite operations in Wink, TX, Winkler County, and the surrounding Permian Basin area.</p>
+          </div>
+
+          <div class="card faq-card">
+            <h3>How can I contact you?</h3>
+            <p>You can call us at 432-208-6938, email us at cactusfreshwater@gmail.com, or use the contact form below.</p>
           </div>
         </div>
       </div>
@@ -679,55 +761,54 @@
           </p>
         </div>
 
-        <div class="contact-wrap">
-         <div class="contact-box" style="margin-top: 24px;">
-  <h3>Our Location</h3>
-  <iframe
-    src="https://www.google.com/maps?q=506%20SE%206th%20St,%20Wink,%20TX%2079789&output=embed"
-    width="100%"
-    height="350"
-    style="border:0; border-radius:16px;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
-</div>
+        <div class="contact-grid">
           <div class="contact-box">
-  <h3>Contact Information</h3>
-  <div class="contact-list">
-    <p><strong>Company:</strong> Cactus Fresh Water LLC</p>
-    <p><strong>Phone:</strong> <a href="tel:4322086938">432-208-6938</a></p>
-    <p><strong>Email:</strong> <a href="mailto:cactusfreshwater@gmail.com">cactusfreshwater@gmail.com</a></p>
-    <p><strong>Address:</strong> 506 SE 6th St, Wink, TX 79789</p>
-    <p><strong>Service Type:</strong> Fresh Water Station</p>
-    <p><strong>Hours:</strong> Open 24/7</p>
-    <p>
-      <a
-        href="https://www.google.com/maps/search/?api=1&query=506+SE+6th+St,+Wink,+TX+79789"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-secondary"
-      >
-        Get Directions
-      </a>
-    </p>
-  </div>
-</div>
+            <h3>Contact Information</h3>
+            <div class="contact-list">
+              <p><strong>Company:</strong> Cactus Fresh Water LLC</p>
+              <p><strong>Phone:</strong> <a href="tel:4322086938">432-208-6938</a></p>
+              <p><strong>Email:</strong> <a href="mailto:cactusfreshwater@gmail.com">cactusfreshwater@gmail.com</a></p>
+              <p><strong>Address:</strong> 506 SE 6th St, Wink, TX 79789</p>
+              <p><strong>Service Type:</strong> Fresh Water Station</p>
+              <p><strong>Hours:</strong> Open 24/7</p>
+              <p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=506+SE+6th+St,+Wink,+TX+79789"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-secondary"
+                >
+                  Get Directions
+                </a>
+              </p>
+            </div>
+          </div>
 
           <div class="contact-box">
             <h3>Send a Message</h3>
             <form action="https://formspree.io/f/mdapbjkb" method="POST">
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Your Email" required />
-  <input type="text" name="company" placeholder="Company Name" />
-  <input type="text" name="phone" placeholder="Phone Number" />
-  <textarea name="message" placeholder="Tell us what type of job or water need you have." required></textarea>
-
-  <input type="hidden" name="_subject" value="New website inquiry from Cactus Fresh Water LLC" />
-
-  <button type="submit" class="btn btn-primary">Submit Request</button>
-</form>
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="email" name="email" placeholder="Your Email" required />
+              <input type="text" name="company" placeholder="Company Name" />
+              <input type="text" name="phone" placeholder="Phone Number" />
+              <textarea name="message" placeholder="Tell us what type of job or water need you have." required></textarea>
+              <input type="hidden" name="_subject" value="New website inquiry from Cactus Fresh Water LLC" />
+              <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
           </div>
+        </div>
+
+        <div class="contact-box map-box">
+          <h3>Our Location</h3>
+          <iframe
+            src="https://www.google.com/maps?q=506%20SE%206th%20St,%20Wink,%20TX%2079789&output=embed"
+            width="100%"
+            height="350"
+            style="border:0; border-radius:16px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </section>
